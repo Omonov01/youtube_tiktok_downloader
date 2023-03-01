@@ -12,7 +12,9 @@ class Database:
         self.pool: Union[Pool, None] = None
 
     async def create(self):
+        print("Baza yaratilmoqda")
         self.pool = await asyncpg.create_pool( connection_url = config.DB_CONNECTION_URL)
+        print("javob qaytdi")
 
     async def execute(self, command, *args,
                       fetch: bool = False,
