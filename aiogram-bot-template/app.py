@@ -9,9 +9,10 @@ from utils.set_bot_commands import set_default_commands
 async def on_startup(dispatcher):
     try:
         await db.create()
-        #await db.create_table_users()
+        await db.create_table_users()
+        print("baza yaratildi")
     except:
-        pass
+        print("Baza yaratilmadi")
     # Birlamchi komandalar (/star va /help)
     await set_default_commands(dispatcher)
 
