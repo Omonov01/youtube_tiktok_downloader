@@ -9,7 +9,7 @@ from utils.set_bot_commands import set_default_commands
 async def on_startup(dispatcher):
     try:
         await db.create()
-        await db.create_table_users()
+        #await db.create_table_users()
     except:
         pass
     # Birlamchi komandalar (/star va /help)
