@@ -13,7 +13,7 @@ IP = env.str("ip")  # Xosting ip manzili
 
 BOT_LINKS = "@sehrgar_bot"
 
-DB_CONNECTION_URL = "postgresql://postgres:549JQIlJwbEoR4424q3i@containers-us-west-18.railway.app:8032/railway"
+DB_CONNECTION_URL = "postgresql://postgres:FQJBQjztwXekh0hdVq8y@containers-us-west-169.railway.app:6867/railway"
 # DB_USER = "postgres"
 # DB_PASS = "okPNSpPdglRDqK5LjnrQ"
 # DB_NAME = "railway"
