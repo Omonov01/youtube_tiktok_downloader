@@ -13,14 +13,7 @@ class Database:
 
     async def create(self):
         print("Baza yaratilmoqda")
-        self.pool = await asyncpg.create_pool( #connection_url = config.DATABASE_URL, 
-                                             host = config.PGHOST,
-                                             port = config.PGPORT,
-                                             user = config.PGUSER,
-                                             password = config.PGPASSWORD,
-                                             database = config.PGDATABASE,
-                                             #DATABASE_URL
-                                             )
+        self.pool = await asyncpg.create_pool(DB_URL, sslmode="require" )
         print("javob qaytdi")
 
     async def execute(self, command, *args,
