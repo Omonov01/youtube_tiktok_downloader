@@ -6,16 +6,17 @@ env.read_env()
 
 # # .env fayl ichidan quyidagilarni o'qiymiz
 BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
-ADMINS = env.list("ADMINS")  # adminlar ro'yxati
-# helper_admins = []
+ADMINS = env.list("ADMINS")  # adminlar ro'yxat
 IP = env.str("ip")  # Xosting ip manzili
-#CHANNELS = ['https://t.me/omonovsanjardev']
-
 BOT_LINKS = "@sehrgar_bot"
 
-DB_CONNECTION_URL = "postgresql://postgres:kaWCBSSspD6j557iNJHR@containers-us-west-120.railway.app:6270/railway"
-# DB_USER = "postgres"
-# DB_PASS = "okPNSpPdglRDqK5LjnrQ"
-# DB_NAME = "railway"
-# DB_HOST = "containers-us-west-151.railway.app "
-# DB_PORT = "6013"
+# DB_CONNECTION_URL = "postgresql://postgres:kaWCBSSspD6j557iNJHR@containers-us-west-120.railway.app:6270/railway"
+PGHOST = env.str("containers-us-west-151.railway.app")
+PGPORT = env.str("6735")
+PGUSER = env.str("postgres")
+PGPASSWORD = env.str("4wnzB0ekmbUf3xaFIq58")
+PGDATABASE = env.str("railway")
+DATABASE_URL = env.str("postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}")
+
+
+
