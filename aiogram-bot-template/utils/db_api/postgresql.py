@@ -18,7 +18,8 @@ class Database:
             port = "7780",
             password = "Zju8eRHibmkqADSvYHxE",
             host = "containers-us-west-101.railway.app",
-            database = "railway"
+            database = "railway",
+            database_url = "postgresql://postgres:Zju8eRHibmkqADSvYHxE@containers-us-west-101.railway.app:7780/railway"
             )
         print("sorovga javob berildi")
 
