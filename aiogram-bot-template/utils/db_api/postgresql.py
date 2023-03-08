@@ -3,7 +3,7 @@ from typing import Union
 import asyncpg
 from asyncpg import Connection
 from asyncpg.pool import Pool
-railway
+
 from data import config
 
 class Database:
@@ -18,7 +18,7 @@ class Database:
             port = "7780",
             password = "Zju8eRHibmkqADSvYHxE",
             host = "containers-us-west-101.railway.app",
-            #database = "railway",
+            database = "railway",
             #database_url = "postgresql://postgres:Zju8eRHibmkqADSvYHxE@containers-us-west-101.railway.app:7780/railway"
             )
         print("sorovga javob berildi")
