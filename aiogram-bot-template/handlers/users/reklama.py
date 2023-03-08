@@ -9,7 +9,7 @@ log = logging.getLogger('broadcast')
 from data.config import ADMINS
 from loader import dp, db, bot
 
-@dp.message_handler(private_chat(),filters.IDFilter(user_id=ADMINS),
+@dp.message_handler(filters.IDFilter(user_id=ADMINS,private_chat()),
         content_types=[
             types.ContentType.PHOTO,
             #types.ContentType.DOCUMENT,
