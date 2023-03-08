@@ -3,7 +3,7 @@ from typing import Union
 import asyncpg
 from asyncpg import Connection
 from asyncpg.pool import Pool
-
+railway
 from data import config
 
 class Database:
@@ -12,15 +12,15 @@ class Database:
         self.pool: Union[Pool, None] = None
 
     async def create(self):
-        print("Baza yaratilmoqda")
-        self.pool = await asyncpg.create_pool(DATABASE_URL = "postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}",
-                                              PGDATABASE = "railway",
-                                              PGHOST = "containers-us-west-151.railway.app",
-                                              PGPASSWORD = "4wnzB0ekmbUf3xaFIq58",
-                                              PGPORT = "6735",
-                                              PGUSER = "postgres"
-                                             )
-        print("javob qaytdi")
+        print("so'rov keldi")
+        self.pool = await asyncpg.create_pool(
+            user = "postgres",
+            port = "7780",
+            password = "Zju8eRHibmkqADSvYHxE",
+            host = "containers-us-west-101.railway.app",
+            database = "railway"
+            )
+        print("sorovga javob berildi")
 
     async def execute(self, command, *args,
                       fetch: bool = False,
