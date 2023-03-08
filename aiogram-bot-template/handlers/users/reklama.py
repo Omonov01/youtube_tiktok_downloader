@@ -1,7 +1,7 @@
 import asyncio
 from aiogram.dispatcher import filters
 from aiogram import types
-from filters import private_chat
+from filters import IsPrivate
 from aiogram.utils import exceptions, executor
 import asyncio
 import logging
@@ -9,7 +9,7 @@ log = logging.getLogger('broadcast')
 from data.config import ADMINS
 from loader import dp, db, bot
 
-@dp.message_handler(filters.IDFilter(user_id=ADMINS,private_chat()),
+@dp.message_handler(IsPrivate(),filters.IDFilter(user_id=ADMINS),
         content_types=[
             types.ContentType.PHOTO,
             #types.ContentType.DOCUMENT,
